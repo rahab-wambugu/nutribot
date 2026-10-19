@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type 2 Diabetes Management Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Type 2 Diabetes Management Assistant</h1>
+        </header>
+
+        <main>
+            <section class="welcome-card">
+                <h2>Welcome</h2>
+                <p>Welcome to your Type 2 Diabetes Management Companion! This tool helps patients and care providers track metrics and manage daily habits.</p>
+            </section>
+
+            <!-- The Form -->
+<form id="diabetes-form">
+    <input type="text" id="blood-sugar" placeholder="e.g. 7.5 mmol/L">
+    <select id="timing">
+        <option value="Fasting (before breakfast)">Fasting (before breakfast)</option>
+        <option value="Post-meal (1-2 hours after)">Post-meal</option>
+    </select>
+    <textarea id="meal-plan" placeholder="Enter planned meal..."></textarea>
+    
+    <button type="submit" id="submit-btn">
+        <span class="btn-text">Generate Recommendations</span>
+        <span class="spinner hidden">⏳</span>
+    </button>
+</form>
+
+<!-- The Results Containers -->
+<div id="results-container" class="hidden">
+    <div id="exercise-output"></div>
+    <div id="meal-output"></div>
+    <div id="analysis-output"></div>
+</div>
+
+<div id="results-container" class="results-container hidden">
+                <div class="output-card">
+                    <h3>✨ Exercise Suggestions</h3>
+                    <div id="exercise-output" class="output-content"></div>
+                </div>
+
+                <div class="output-card">
+                    <h3>🥗 Personalized Meal Recommendations</h3>
+                    <div id="meal-output" class="output-content"></div>
+                </div>
+
+                <div class="output-card">
+                    <h3>📊 Blood Sugar Analysis</h3>
+                    <div id="analysis-output" class="output-content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
